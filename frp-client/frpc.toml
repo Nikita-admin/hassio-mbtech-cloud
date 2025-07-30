@@ -1,0 +1,24 @@
+serverAddr = "mars.mbtech.su"
+serverPort = 7000
+
+transport.tls.enable = true
+
+auth.method = "token"
+auth.token = "insert_token"
+
+user = "insert_user"
+metadatas.token = "insert_pass"
+
+transport.heartbeatInterval = 10
+transport.heartbeatTimeout = 90
+
+log.to = "/share/frpc.log"
+log.level = "info"
+
+[[proxies]]
+name = "homeassistant"
+type = "tcp"
+localIP = "127.0.0.1"
+localPort = 8123
+transport.useEncryption = true
+transport.useCompression = false
